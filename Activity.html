@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>虹色の鉛筆募金</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js" type="text/javascript"></script>
+    <link rel="icon" type="image/png" href="images/pencil2.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            var offset = 100;
+            var duration = 500;
+            jQuery(window).scroll(function() {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.pagetop').fadeIn(duration);
+                } else {
+                    jQuery('.pagetop').fadeOut(duration);
+                }
+            });
+
+            jQuery('.pagetop').click(function(event) {
+                event.preventDefault();
+                jQuery('html, body').animate({
+                    scrollTop: 0
+                }, duration);
+                return false;
+            })
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="home" class="big-bg">
+        <header class="page-header wrapper">
+            <h1><a href="index.html">虹色の鉛筆募金</a></h1>
+            <p>ACTIVITY</p>
+            <nav>
+                <ul class="main-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="Other.html">Other</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <hr>
+    <h3 id="私たちの活動について">～私たちの活動について～</h3>
+    <p>我々は、この「虹色の鉛筆募金」活動を12年間にわたり続けてきました。<br>学内でもある一定の認知度は得ていますが、活動領域は学内だけであり、<br>我々は、さらなる社会貢献が望めないと思い、<br>webなどのインターネットを視野に入れ始めました。</p>
+    <h3 id="今までの私たちの活動について">～今までの私たちの活動について～</h3>
+    <p>一年間に行われる募金は<a href=https://www.chiben.ac.jp/wakayama/>智辯学園和歌山中学・高等学校</a>の文化祭の二日間だけでした。<br>大体が3,4万円前後です。</p>
+    <p>下のグラフは過去の募金高です。</p>
+    <div id="canvas-wrapper">
+        <canvas id="graph-area" height="450" width="600"></canvas>
+        <script type="text/javascript">
+            var barChartData = {
+                labels: ["2008年", "2009年", "2010年", "2011年", "2012年", "2013年", "2014年", "2015年", "2020年"],
+                datasets: [{
+                    label: "青データ",
+                    fillColor: "rgba(151,187,205,1)",
+                    strokeColor: "rgba(151,187,205,1)",
+                    pointColor: "rgba(151,187,205,1)",
+                    pointStrokeColor: "white",
+                    pointHighlightFill: "yellow",
+                    pointHighlightStroke: "blue",
+                    data: [14649, 7900, 9600, 596119, 25000, 32400, 35200, 42200, 58300]
+                }]
+
+            }
+            window.onload = function() {
+                var ctx = document.getElementById("graph-area").getContext("2d");
+                window.myBar = new Chart(ctx).Bar(barChartData);
+            }
+        </script>
+    </div>
+    <h4 id="2020">-2020年-</h4>
+    <p>あしなが育英会に58300円送金致しました。</p>
+    <h4 id="2015">-2015年-</h4>
+    <p>あしなが育英会へは25000円<br>NHK歳末助け合いへは17200円<br>送金しました。<br>総計42200円です。</p>
+    <h4 id="2014">-2014年-</h4>
+    <p>あしなが育英会に東日本大震災・津波遺児への支援金<br>日本赤十字社に平成26年度広島県大雨災害義援金として<br>35,200円送金致しました。</p>
+    <h4 id="2013">-2013年-</h4>
+    <p>あしなが育英会にあしなが東北レインボーハウス、<br>日本赤十字社に伊豆大島等台風26号災害東京都義援金、<br>2013年フィリピン台風義援金、<br>シリア人人道危機救援金として<br>32,400円送金致しました。</p>
+    <h4 id="2012">-2012年-</h4>
+    <p>あしなが育英会に東日本大震災災害孤児支援金<br>栄村（長野県）役場に栄村大地震義援金として<br>25,000円送金致しました。</p>
+    <h4 id="2011">-2011年-</h4>
+    <p>日本赤十字社に東日本大震災義援金<br>日本赤十字社和歌山県支部に台風12号災害（紀伊水害）義援金<br>として24,200円<br>東日本大震災緊急義援募金（2011年3月18,19日）生徒会と共催し<br>日本赤十字社和歌山県支部に東日本大震災義援金として<br>571,919円送金致しました。<br>総計596,119円です。</p>
+    <h4 id="2010">-2010年-</h4>
+    <p>公益社団法人日本ユネスコ協会連盟に<br>ハイチ地震教育支援金として<br>9,600円送金致しました。</p>
+    <h4 id="2009">-2009年-</h4>
+    <p>日本赤十字社にスマトラ島地震義援金<br>サモア地震津波義援金として<br>7,900円送金致しました。</p>
+    <h4 id="2008">-2008年-</h4>
+    <p>日本赤十字社にスマトラ島地震義援金<br>サモア地震津波義援金として<br>7,900円送金致しました。</p>
+    <h3 id="これからの活動について">～これからの活動について～</h3>
+    <p>今年度の目標としては、<br>継続的な活動<br>組織の活動人員、活動領域拡大<br>を掲げています。</p>
+    <p>また<br>募金総額を多くする<br>具体的な募金目的の提示<br>が我々の現状での課題です。</p>
+    <h3></h3>
+    <section id="sns">
+        <div class="wrapper">
+            <div class="sns-box">
+                <h3 class="sub-title" id="以前まで活動していたfacebook">[旧]Facebook</h3>
+                <p>これは2008年～2015年まで<br>活動されていたFacebookのアカウントです。</p>
+                <div class="facebook-area">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fniziironoenpitsu2008%2F&tabs=timeline&width=340&height=315&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340"
+                        height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                </div>
+                <h3 class="sub-title" id="活動中のtwitter">twitter</h3>
+                <p>これは今後も活動を<br>続けていくTwitterです。</p>
+                <div class="twitter-area">
+                    <a class="twitter-timeline" data-width="340" data-height="315" href="https://twitter.com/niziirobokin?ref_src=twsrc%5Etfw">Tweets by niziirobokin</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <input class="pagetop" type="image" src="images/top-btn.png" alt="TOPへ">
+</body>
+<footer>
+    <div class="wrapper">
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false"></a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <br><a href="#私たちの活動について">私たちの活動についてはこちら＞</a>
+        <br><a href="#今までの私たちの活動について">今までの私たちの活動についてはこちら＞</a>
+        <br><a href="#これからの活動について">これからの活動についてはこちら＞</a>
+        <br><a href="news.html">活動報告はこちら＞</a>
+        <br>
+        <br><a href="#以前まで活動していたfacebook">以前まで活動していたfacebookはこちら＞</a>
+        <br><a href="#活動中のtwitter">活動中のtwitterはこちら＞</a>
+        <br>
+        <br><a href="Other.html#あしなが育英会">あしなが育英会さんについてはこちら＞</a>
+        <br>
+        <br><a href="#2008">2008年の功績はこちら＞</a>
+        <a href="#2009">2009年の功績はこちら＞</a>
+        <br><a href="#2010">2010年の功績はこちら＞</a>
+        <a href="#2011">2011年の功績はこちら＞</a>
+        <br><a href="#2012">2012年の功績はこちら＞</a>
+        <a href="#2013">2013年の功績はこちら＞</a>
+        <br><a href="#2014">2014年の功績はこちら＞</a>
+        <a href="#2015">2015年の功績はこちら＞</a>
+        <br><a href="#2020">2020年の功績はこちら＞</a>
+        <br>
+        <br><a href="Other.html#虹色の鉛筆募金の由来について">虹色の鉛筆募金の由来についてはこちら＞</a>
+        <br>
+        <br><a href="Other.html#ご意見">ご意見/お問い合わせはこちら＞</a>
+        <br>
+        <br><img src="images/pencil.png" alt="虹色鉛筆" width="7%" height="7%">
+        <br>
+        <p><small>&copy; 2021 虹色の鉛筆募金</small></p>
+    </div>
+</footer>
+
+</html>
