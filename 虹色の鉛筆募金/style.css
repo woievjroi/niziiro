@@ -2,131 +2,164 @@
 html {
     font-size: 100%;
 }
+
 body {
-    background-color: #ffffff;
-    background-image: url(images/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: #fff6da;
     line-height: 1.7;
-        color: #432;
+    color: #432;
     margin: 0;
     padding: 0;
 }
 
- .main-nav {
+.main-nav {
     display: flex;
     font-size: 1.25rem;
     text-transform: uppercase;
     margin-top: 34px;
     list-style: none;
 }
- .main-nav li {
-     margin-left: 25px;
-     margin-right: 25px;
- }
- .page-header a {
-     text-decoration: none;
-     color: #432;
- }
- .page-header h1 {
-     margin-left: 25px;
- }
- .page-header {
-     display: flex;
-     justify-content: space-between;
- }
- .page-header p {
+
+.main-nav li {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.page-header a {
+    text-decoration: none;
+    color: #432;
+}
+
+.page-header h1 {
+    margin-left: 25px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-header.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.page-header p {
     margin-left: 230px;
     font-size: 25px;
     color: #432;
- }
+}
+
 h1 {
     text-align: center;
     color: #432;
     font-family: "游ゴシック体", "Yu Gothic", Yu Gothic, sans-serif;
 }
+
 p {
     text-align: center;
     font-size: 17px;
     font-family: "游ゴシック体", "Yu Gothic", Yu Gothic, sans-serif;
 }
+
 li {
-    
     font-family: "游ゴシック体", "Yu Gothic", Yu Gothic, sans-serif;
 }
+
 a {
+    color: #432;
+    text-decoration: none;
     text-align: center;
     font-size: 17px;
     font-family: "游ゴシック体", "Yu Gothic", Yu Gothic, sans-serif;
 }
+
 h3 {
     text-align: center;
     color: #432;
     font-family: "游ゴシック体", "Yu Gothic", Yu Gothic, sans-serif;
 }
+
 h4 {
     text-align: center;
     color: #432;
     font-family: "游ゴシック体", "Yu Gothic", Yu Gothic, sans-serif;
 }
- #canvas-wrapper {
-     width: 600px;
-     margin:0 auto;
- }
+
+#canvas-wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
+
 footer {
     background-color: #ffffff;
     text-align: center;
     padding: 26px 0;
 }
+
 footer p {
     color: #432;
     font-size: 0.875rem;
 }
+
+footer a {
+    color: #432;
+    font-size: 0.875rem;
+}
+
 form div {
     text-align: center;
     margin-bottom: 14px;
 }
+
 label {
     text-align: center;
     font-size: 1.125rem;
     margin-bottom: 10px;
     display: block;
 }
+
 input[type="text"],
 input[type="email"],
 textarea {
     text-align: center;
-    background: rgba(255,255,255,.5);
+    background: rgba(255, 255, 255, .5);
     border: 1px #fff solid;
     border-radius: 5px;
     padding: 10px;
     font-size: 1rem;
 }
+
 input[type="text"],
 input[type="email"] {
-    width:100%;
+    width: 100%;
     max-width: 240px;
 }
+
 textarea {
     width: 100%;
     max-width: 480px;
     height: 6rem;
 }
-input[type="submit"]{
+
+input[type="submit"] {
     border: none;
     cursor: pointer;
     line-height: 1;
-    margin-left: 710px;
     font-size: 1.125rem;
     background: #0bd;
     color: #ffffff;
     border-radius: 5px;
     padding: 10px 32px;
 }
- .button:hover {
-     background: #0090aa;
- }
+
+.button-area {
+    text-align: center;
+}
+
+.button:hover {
+    background: #0090aa;
+}
+
 #sns .sub-title {
     text-align: center;
     margin-bottom: 30px;
@@ -135,6 +168,26 @@ input[type="submit"]{
     border-bottom: 2px #0bd solid;
     font-weight: normal;
 }
-iframe {
-    margin-left: 585px;
+
+.facebook-area {
+    text-align: center;
+}
+
+.twitter-area {
+    text-align: center;
+}
+
+.pagetop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 0px 0px;
+    width: 75px;
+    height: 75px;
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }
