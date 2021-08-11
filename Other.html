@@ -76,7 +76,7 @@
         </p>
         <h3 id="ご意見">～ご意見/お問い合わせ～</h3>
     </div class="wrapper">
-    <form action="#">
+    <form class="formrun" action="https://form.run/api/v1/r/tj32xfxele5kbks3f7fxlizo" method="post">
         <div>
             <label for="name">お名前</label>
             <input type="text" id="name" name="your-name">
@@ -84,6 +84,8 @@
         <div>
             <label for="email">メールアドレス</label>
             <input type="email" id="email" name="your-message">
+            <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+        </div>
         </div>
         <div>
             <label for="message">メッセージ</label>
@@ -101,9 +103,12 @@
             <label for="_formrun_gotcha">If you are a human, ignore this field</label>
             <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
         </div>
-        <div class="button-area">
-            <input type="submit" class="button" value="送信">
-        </div>
+        <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+    </form>
+
+    <div class="button-area">
+        <input type="submit" class="button" value="送信">
+    </div>
     </form>
     <br>
     <input class="pagetop" type="image" src="images/top-btn.png" alt="TOPへ">
